@@ -30,22 +30,22 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tbStrToEncrypt = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbSalt = new System.Windows.Forms.TextBox();
-            this.btEncrypt = new System.Windows.Forms.Button();
-            this.btDecrypt = new System.Windows.Forms.Button();
-            this.tbEncrypted = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbStrToEncode = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbASCIICodes = new System.Windows.Forms.TextBox();
-            this.btEncode = new System.Windows.Forms.Button();
             this.btClearCryptTab = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbEncrypted = new System.Windows.Forms.TextBox();
+            this.btDecrypt = new System.Windows.Forms.Button();
+            this.btEncrypt = new System.Windows.Forms.Button();
+            this.tbSalt = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbStrToEncrypt = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btClearEncodeTab = new System.Windows.Forms.Button();
+            this.btEncode = new System.Windows.Forms.Button();
+            this.tbASCIICodes = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbStrToEncode = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -80,6 +80,84 @@
             this.tabPage1.Text = "Encrypt/Decrypt";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btClearCryptTab
+            // 
+            this.btClearCryptTab.Location = new System.Drawing.Point(246, 79);
+            this.btClearCryptTab.Name = "btClearCryptTab";
+            this.btClearCryptTab.Size = new System.Drawing.Size(75, 23);
+            this.btClearCryptTab.TabIndex = 8;
+            this.btClearCryptTab.Text = "Clear All";
+            this.btClearCryptTab.UseVisualStyleBackColor = true;
+            this.btClearCryptTab.Click += new System.EventHandler(this.btClearAll_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 123);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Encrypted";
+            // 
+            // tbEncrypted
+            // 
+            this.tbEncrypted.Location = new System.Drawing.Point(131, 120);
+            this.tbEncrypted.Name = "tbEncrypted";
+            this.tbEncrypted.Size = new System.Drawing.Size(298, 20);
+            this.tbEncrypted.TabIndex = 6;
+            // 
+            // btDecrypt
+            // 
+            this.btDecrypt.Location = new System.Drawing.Point(354, 79);
+            this.btDecrypt.Name = "btDecrypt";
+            this.btDecrypt.Size = new System.Drawing.Size(75, 23);
+            this.btDecrypt.TabIndex = 5;
+            this.btDecrypt.Text = "Decrypt";
+            this.btDecrypt.UseVisualStyleBackColor = true;
+            this.btDecrypt.Click += new System.EventHandler(this.btDecrypt_Click);
+            // 
+            // btEncrypt
+            // 
+            this.btEncrypt.Location = new System.Drawing.Point(131, 79);
+            this.btEncrypt.Name = "btEncrypt";
+            this.btEncrypt.Size = new System.Drawing.Size(75, 23);
+            this.btEncrypt.TabIndex = 4;
+            this.btEncrypt.Text = "Encrypt";
+            this.btEncrypt.UseVisualStyleBackColor = true;
+            this.btEncrypt.Click += new System.EventHandler(this.btEncrypt_Click);
+            // 
+            // tbSalt
+            // 
+            this.tbSalt.Location = new System.Drawing.Point(131, 39);
+            this.tbSalt.Name = "tbSalt";
+            this.tbSalt.Size = new System.Drawing.Size(298, 20);
+            this.tbSalt.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(25, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Salt";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "String to encrypt";
+            // 
+            // tbStrToEncrypt
+            // 
+            this.tbStrToEncrypt.Location = new System.Drawing.Point(131, 7);
+            this.tbStrToEncrypt.Name = "tbStrToEncrypt";
+            this.tbStrToEncrypt.Size = new System.Drawing.Size(298, 20);
+            this.tbStrToEncrypt.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.btClearEncodeTab);
@@ -96,125 +174,6 @@
             this.tabPage2.Text = "Encode ASCII";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tbStrToEncrypt
-            // 
-            this.tbStrToEncrypt.Location = new System.Drawing.Point(131, 7);
-            this.tbStrToEncrypt.Name = "tbStrToEncrypt";
-            this.tbStrToEncrypt.Size = new System.Drawing.Size(298, 20);
-            this.tbStrToEncrypt.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "String to encrypt";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Salt";
-            // 
-            // tbSalt
-            // 
-            this.tbSalt.Location = new System.Drawing.Point(131, 39);
-            this.tbSalt.Name = "tbSalt";
-            this.tbSalt.Size = new System.Drawing.Size(298, 20);
-            this.tbSalt.TabIndex = 3;
-            // 
-            // btEncrypt
-            // 
-            this.btEncrypt.Location = new System.Drawing.Point(131, 79);
-            this.btEncrypt.Name = "btEncrypt";
-            this.btEncrypt.Size = new System.Drawing.Size(75, 23);
-            this.btEncrypt.TabIndex = 4;
-            this.btEncrypt.Text = "Encrypt";
-            this.btEncrypt.UseVisualStyleBackColor = true;
-            this.btEncrypt.Click += new System.EventHandler(this.btEncrypt_Click);
-            // 
-            // btDecrypt
-            // 
-            this.btDecrypt.Location = new System.Drawing.Point(354, 79);
-            this.btDecrypt.Name = "btDecrypt";
-            this.btDecrypt.Size = new System.Drawing.Size(75, 23);
-            this.btDecrypt.TabIndex = 5;
-            this.btDecrypt.Text = "Decrypt";
-            this.btDecrypt.UseVisualStyleBackColor = true;
-            this.btDecrypt.Click += new System.EventHandler(this.btDecrypt_Click);
-            // 
-            // tbEncrypted
-            // 
-            this.tbEncrypted.Location = new System.Drawing.Point(131, 120);
-            this.tbEncrypted.Name = "tbEncrypted";
-            this.tbEncrypted.Size = new System.Drawing.Size(298, 20);
-            this.tbEncrypted.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Encrypted";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "String to encode";
-            // 
-            // tbStrToEncode
-            // 
-            this.tbStrToEncode.Location = new System.Drawing.Point(128, 18);
-            this.tbStrToEncode.Name = "tbStrToEncode";
-            this.tbStrToEncode.Size = new System.Drawing.Size(291, 20);
-            this.tbStrToEncode.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 111);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "ASCII Code";
-            // 
-            // tbASCIICodes
-            // 
-            this.tbASCIICodes.Location = new System.Drawing.Point(128, 108);
-            this.tbASCIICodes.Name = "tbASCIICodes";
-            this.tbASCIICodes.Size = new System.Drawing.Size(291, 20);
-            this.tbASCIICodes.TabIndex = 3;
-            // 
-            // btEncode
-            // 
-            this.btEncode.Location = new System.Drawing.Point(128, 59);
-            this.btEncode.Name = "btEncode";
-            this.btEncode.Size = new System.Drawing.Size(75, 23);
-            this.btEncode.TabIndex = 4;
-            this.btEncode.Text = "Encode";
-            this.btEncode.UseVisualStyleBackColor = true;
-            // 
-            // btClearCryptTab
-            // 
-            this.btClearCryptTab.Location = new System.Drawing.Point(246, 79);
-            this.btClearCryptTab.Name = "btClearCryptTab";
-            this.btClearCryptTab.Size = new System.Drawing.Size(75, 23);
-            this.btClearCryptTab.TabIndex = 8;
-            this.btClearCryptTab.Text = "Clear All";
-            this.btClearCryptTab.UseVisualStyleBackColor = true;
-            this.btClearCryptTab.Click += new System.EventHandler(this.btClearAll_Click);
-            // 
             // btClearEncodeTab
             // 
             this.btClearEncodeTab.Location = new System.Drawing.Point(344, 59);
@@ -225,6 +184,48 @@
             this.btClearEncodeTab.UseVisualStyleBackColor = true;
             this.btClearEncodeTab.Click += new System.EventHandler(this.btClearEncodeTab_Click);
             // 
+            // btEncode
+            // 
+            this.btEncode.Location = new System.Drawing.Point(128, 59);
+            this.btEncode.Name = "btEncode";
+            this.btEncode.Size = new System.Drawing.Size(75, 23);
+            this.btEncode.TabIndex = 4;
+            this.btEncode.Text = "Encode";
+            this.btEncode.UseVisualStyleBackColor = true;
+            this.btEncode.Click += new System.EventHandler(this.btEncode_Click);
+            // 
+            // tbASCIICodes
+            // 
+            this.tbASCIICodes.Location = new System.Drawing.Point(128, 108);
+            this.tbASCIICodes.Name = "tbASCIICodes";
+            this.tbASCIICodes.Size = new System.Drawing.Size(291, 20);
+            this.tbASCIICodes.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 111);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "ASCII Code";
+            // 
+            // tbStrToEncode
+            // 
+            this.tbStrToEncode.Location = new System.Drawing.Point(128, 18);
+            this.tbStrToEncode.Name = "tbStrToEncode";
+            this.tbStrToEncode.Size = new System.Drawing.Size(291, 20);
+            this.tbStrToEncode.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "String to encode";
+            // 
             // CriptForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,7 +233,6 @@
             this.ClientSize = new System.Drawing.Size(479, 207);
             this.Controls.Add(this.tabControl1);
             this.Name = "CriptForm1";
-            this.Text = "Criptool v.1.0 Alpha by @jefersonrod";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
