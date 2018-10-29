@@ -46,6 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tbStrToEncode = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btDecode = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -160,6 +161,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btDecode);
             this.tabPage2.Controls.Add(this.btClearEncodeTab);
             this.tabPage2.Controls.Add(this.btEncode);
             this.tabPage2.Controls.Add(this.tbASCIICodes);
@@ -176,7 +178,7 @@
             // 
             // btClearEncodeTab
             // 
-            this.btClearEncodeTab.Location = new System.Drawing.Point(344, 59);
+            this.btClearEncodeTab.Location = new System.Drawing.Point(235, 59);
             this.btClearEncodeTab.Name = "btClearEncodeTab";
             this.btClearEncodeTab.Size = new System.Drawing.Size(75, 23);
             this.btClearEncodeTab.TabIndex = 5;
@@ -226,6 +228,16 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "String to encode";
             // 
+            // btDecode
+            // 
+            this.btDecode.Location = new System.Drawing.Point(344, 59);
+            this.btDecode.Name = "btDecode";
+            this.btDecode.Size = new System.Drawing.Size(75, 23);
+            this.btDecode.TabIndex = 6;
+            this.btDecode.Text = "Decode";
+            this.btDecode.UseVisualStyleBackColor = true;
+            this.btDecode.Click += new System.EventHandler(this.btDecode_Click);
+            // 
             // CriptForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +273,7 @@
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Button btClearCryptTab;
         private System.Windows.Forms.Button btClearEncodeTab;
+        private System.Windows.Forms.Button btDecode;
     }
 }
 
